@@ -1,0 +1,13 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+*.zip
+.vscode/
+.env
+.env.*
+!.env.example
+# Nested CRM API project - lives in its own repo, excluded from this push
+crm-backend/

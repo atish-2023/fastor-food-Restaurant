@@ -1,0 +1,62 @@
+@import './variables.css';
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-body);
+  background-color: #F1F3F5;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Kept inside @layer base so Tailwind's text-* utilities can still override it.
+   Unlayered rules win the cascade against layered utilities, which previously
+   forced every heading to --color-text-heading (e.g. the dark "30% OFF" text). */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-text-heading);
+  }
+}
+
+/* Mulish-only screens (Sign Up / 6-digit code): headings included */
+@layer utilities {
+  .font-mulish,
+  .font-mulish :is(h1, h2, h3, h4, h5, h6) {
+    font-family: 'Mulish', sans-serif;
+  }
+
+  /* League Spartan-only screen (Item Detail): headings included */
+  .font-league,
+  .font-league :is(h1, h2, h3, h4, h5, h6) {
+    font-family: 'League Spartan', sans-serif;
+  }
+}
+
+/* Custom scrollbar for horizontal best seller strip */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom phone frame styling */
+.phone-viewport {
+  width: 100%;
+  max-width: 390px;
+  min-height: 844px;
+  background-color: var(--color-bg-page);
+  position: relative;
+  overflow-x: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 640px) {
+  .phone-viewport {
+    max-width: 100%;
+    min-height: 100vh;
+    box-shadow: none;
+  }
+}

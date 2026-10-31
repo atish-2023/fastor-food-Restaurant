@@ -1,0 +1,6 @@
+{
+  "name": "Fastor - Food Ordering App & CRM Backend",
+  "description": "Pixel-perfect mobile food ordering app Fastor with OTP verification, menu browsing, portion selector, and comprehensive CRM backend REST API with PostgreSQL and JWT.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
