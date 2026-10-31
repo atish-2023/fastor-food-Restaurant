@@ -87,4 +87,8 @@ fastor-food/
     └── index.css   # @import tailwindcss + global.css
 public/assets/    fastor-1 … fastor-10.png  (every file referenced)
 crm-backend/      separate CRM API project (own package.json) — to live in its own repo
-```
+```  
+
+
+<img width="1116" height="723" alt="Screenshot 2026-10-30 134038" src="https://github.com/user-attachments/assets/4e89922d-3247-4e41-a11a-4882df848fa7" />
+
